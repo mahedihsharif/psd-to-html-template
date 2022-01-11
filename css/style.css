@@ -1,0 +1,129 @@
+/* main css style */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* some sass style */
+:root {
+  --main-color: #e6f0ff;
+  --second-color: rgb(10, 1, 48);
+  --black: #000;
+  --white: #fff;
+  --body-text-color: rgb(68, 68, 68);
+}
+/* css common style start */
+body {
+  font-family: "Poppins", sans-serif !important;
+  color: var(--body-text-color) !important;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+/* css common style end */
+
+/* css header style start */
+nav.navigation {
+  padding: 15px 0;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-wrapper .header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .menu-ul {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper .header-right .menu-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li.nav-list {
+  margin: 0px 5px;
+}
+
+p.logo {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--second-color);
+}
+a.nav-link {
+  font-size: 18px;
+  color: var(--second-color);
+  transition: 0.3s;
+}
+
+a.nav-link:hover {
+  color: rgb(10, 184, 10);
+}
+
+a.nav-register {
+  color: var(--white);
+  background-color: var(--second-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+a.nav-register:hover {
+  color: var(--second-color);
+  background-color: var(--main-color);
+}
+i.bx.bx-menu {
+  font-size: 25px;
+  display: none;
+}
+
+/* ========navigation responsive========== */
+
+@media only screen and (max-width: 992px) {
+  i.bx.bx-menu {
+    font-size: 25px;
+    display: block;
+  }
+  .menu .menu-ul {
+    display: block;
+    align-items: center;
+    position: fixed;
+    top: 74px;
+    background: #fff;
+    padding: 17px 128px 50px 28px;
+    right: -287px;
+    height: 100vh;
+    border-radius: 5px;
+    box-shadow: -6px 1px 17px 0px #ddd;
+  }
+  .toggle {
+    display: block;
+    margin: 10px;
+    cursor: pointer;
+  }
+  ul.menu-ul.active {
+    right: 0px;
+    transition:.3s;
+  }
+  .header-wrapper .header-right .menu-right .nav-list a{
+    display:none;
+  }
+}
+
+/* css header style end */
